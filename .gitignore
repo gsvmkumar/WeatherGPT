@@ -1,0 +1,81 @@
+# ============================================================
+# WeatherGPT — Master .gitignore
+# Prevents accidental commits of secrets, virtualenvs, dependencies,
+# build artifacts, and system metadata.
+# ============================================================
+
+# ── Environment & Secrets ──────────────────────────────────
+.env
+.env.*
+.env*.local
+*.env
+*.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+!mobile/.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
+# ── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage/
+
+# ── Node / Next.js ─────────────────────────────────────────
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Expo / React Native / Mobile ───────────────────────────
+.expo/
+web-build/
+
+# ── Build Output ───────────────────────────────────────────
+build/
+dist/
+
+# ── Logs ───────────────────────────────────────────────────
+*.log
+
+# ── Local Databases ────────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.db
+
+# ── IDE & Editor Artifacts ─────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── Operating System ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Alembic Cache ──────────────────────────────────────────
+# Preserve alembic.ini and versions/*.py, but ignore compiled files
+backend/alembic/versions/*.pyc
+backend/alembic/versions/__pycache__/

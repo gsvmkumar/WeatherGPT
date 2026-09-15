@@ -1,0 +1,32 @@
+{
+  "name": "weathergpt-mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "expo": "~52.0.0",
+    "expo-asset": "~11.0.5",
+    "expo-av": "~15.0.2",
+    "expo-location": "~18.0.10",
+    "expo-secure-store": "~14.0.1",
+    "expo-speech": "~13.0.0",
+    "expo-status-bar": "~2.0.0",
+    "lucide-react-native": "^0.460.0",
+    "react": "18.3.1",
+    "react-native": "^0.76.9",
+    "react-native-svg": "15.8.0",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~18.3.12",
+    "typescript": "^5.3.3"
+  },
+  "private": true
+}

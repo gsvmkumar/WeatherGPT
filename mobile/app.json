@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "WeatherGPT",
+    "slug": "weathergpt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.weathergpt.mobile",
+      "versionCode": 1,
+      "permissions": [
+        "RECORD_AUDIO",
+        "INTERNET",
+        "VIBRATE",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store"
+    ]
+  }
+}
