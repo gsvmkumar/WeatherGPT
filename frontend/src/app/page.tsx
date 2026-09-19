@@ -91,7 +91,7 @@ export default function DashboardPage() {
             </div>
             <div>
               <p className="text-sm font-medium text-white">{t.chat}</p>
-              <p className="text-xs text-gray-500">Natural language weather Q&A</p>
+              <p className="text-xs text-gray-500">{t.chatGrounded || 'Natural language weather Q&A'}</p>
             </div>
           </Link>
         </div>
@@ -133,7 +133,7 @@ export default function DashboardPage() {
           <div className="flex items-center gap-2">
             <AlertTriangle size={16} className="text-orange-400" />
             <h2 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
-              Active Alerts ({activeAlerts.length})
+              {t.alerts} ({activeAlerts.length})
             </h2>
           </div>
           <div className="grid gap-3">
@@ -169,12 +169,13 @@ export default function DashboardPage() {
       )}
 
       {/* Navigation cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
         {[
-          { href: '/forecast', emoji: '📅', label: 'Forecast', desc: '7-day outlook' },
-          { href: '/alerts', emoji: '🚨', label: 'Alerts', desc: `${activeAlerts.length} active` },
-          { href: '/advisory', emoji: '💡', label: 'Advisory', desc: 'Personalized tips' },
-          { href: '/history', emoji: '📊', label: 'History', desc: 'Past 30 days' },
+          { href: '/forecast', emoji: '📅', label: t.forecast, desc: '7-day outlook' },
+          { href: '/alerts', emoji: '🚨', label: t.alerts, desc: `${activeAlerts.length} active` },
+          { href: '/shelters', emoji: '🛡️', label: t.shelters || 'Safe Shelters', desc: 'Emergency relief' },
+          { href: '/advisory', emoji: '💡', label: t.advisory, desc: 'Personalized tips' },
+          { href: '/history', emoji: '📊', label: t.history, desc: 'Past 30 days' },
         ].map(({ href, emoji, label, desc }) => (
           <Link key={href} href={href} className="glass-card glass-card-hover p-4 block">
             <span className="text-2xl block mb-2">{emoji}</span>
