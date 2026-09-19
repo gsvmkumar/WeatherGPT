@@ -61,13 +61,13 @@ export const ALERT_TYPE_ICONS: Record<AlertType, string> = {
 
 export function weatherEmoji(code: number, isDay: boolean): string {
   if (code === 0) return isDay ? '☀️' : '🌙';
-  if (code <= 2) return isDay ? '⛅' : '🌤️';
+  if (code <= 2) return isDay ? '🌤️' : '☁️';
   if (code === 3) return '☁️';
   if (code <= 48) return '🌫️';
-  if (code <= 55) return '🌦️';
+  if (code <= 55) return isDay ? '🌦️' : '🌧️';
   if (code <= 65) return '🌧️';
   if (code <= 75) return '❄️';
-  if (code <= 82) return '🌦️';
+  if (code <= 82) return isDay ? '🌦️' : '🌧️';
   if (code <= 99) return '⛈️';
   return '🌡️';
 }
@@ -95,4 +95,3 @@ export const LANGUAGE_LABELS: Record<Language, string> = {
   mr: 'मराठी',
   bn: 'বাংলা',
 };
-
